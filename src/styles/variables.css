@@ -1,0 +1,20 @@
+:root {
+  --mainTextColor: #06060B;
+  --labelTextColor: #222222;
+  --softTextColor: #898989;
+  --semiSoftTextColor: #948E97;
+  --invertedTextColor: #F5F5FA;
+
+  --baseBgColor: #FCFCFC;
+  --semiBaseBgColor: #D9D9D9;
+  --mainBgColor: #5D00FF;
+  --semiMainBgColor: #8686FF;
+  --semiSoftBgColor: #DFDFFF;
+  --softBgColor: #F2F2F8;
+  --rowBgColor: #F8F8F8;
+  --warningColor: #FFF06C;
+  --dangerColor: #FF7A7A;
+
+  --fontFamily: 'Raleway', sans-serif;
+  --secondFontFamily: 'Poppins', sans-serif;
+}

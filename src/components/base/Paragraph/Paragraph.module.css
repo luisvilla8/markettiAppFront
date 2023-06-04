@@ -1,0 +1,15 @@
+.paragraph {
+  font-size: .8rem;
+  font-family: var(--fontFamily);
+  font-weight: 600;
+  color: var(--semiSoftTextColor);
+  margin: .5rem 0;
+}
+
+.paragraph a {
+  color: var(--mainTextColor);
+}
+
+.paragraph a:hover {
+  text-shadow: 0px 0px 30px var(--mainTextColor);
+}
