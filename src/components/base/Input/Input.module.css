@@ -1,0 +1,41 @@
+.input__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.input__label {
+  font-family: var(--fontFamily);
+  font-weight: 600;
+  font-size: .8rem;
+  color: var(--labelTextColor);
+  margin-bottom: -0.5rem;
+}
+
+.input__box {
+  font-family: var(--secondFontFamily);
+  width: 100%;
+  border: 2px solid var(--semiSoftBgColor);
+  border-radius: .45rem;
+  padding: .75rem .75rem .6rem;
+  background-color: transparent;
+}
+
+.input__box:focus {
+  outline: none;
+  border: 2px solid var(--semiMainBgColor);
+}
+
+.input_message {
+  font-size: .8rem;
+  margin: -.5rem 0 0 .5rem;
+}
+
+.input_message[role="error"] {
+  color: var(--dangerColor);
+}
