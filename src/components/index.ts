@@ -7,3 +7,5 @@ export * from './shared/Copyright/Copyright';
 export * from './shared/Logo/Logo';
 export * from './shared/LogoTitle/LogoTitle';
 export * from './shared/PasswordInput/PasswordInput';
+export * from './shared/routesValidator/MustAuth';
+export * from './shared/routesValidator/NoMustAuth';
