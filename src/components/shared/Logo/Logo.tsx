@@ -1,10 +1,22 @@
 export const Logo = () => {
   return (
-    <svg width="35" height="35" viewBox="0 0 62 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="42.4264" y="9.36542" width="16" height="60" rx="8" transform="rotate(45 42.4264 9.36542)" fill="#1E1E1E" />
-      <rect x="35.1063" y="73" width="16" height="26" rx="8" transform="rotate(-90 35.1063 73)" fill="#1E1E1E" />
-      <rect x="35.1295" y="12.2194" width="16" height="60" rx="8" fill="#1E1E1E" />
-      <rect x="3.10632" width="16" height="60" rx="8" fill="#1E1E1E" />
+    <svg width="35" height="35" viewBox="0 0 40 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0_401_84" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="1" y="0" width="39" height="45">
+    <rect width="9.71671" height="36.4377" rx="4.85836" transform="matrix(0.719041 0.694968 -0.719041 0.694968 26.2002 7.01855)" fill="#FCFCFC"/>
+    <rect x="21.8868" y="45" width="9.28571" height="18.1132" rx="4.64286" transform="rotate(-90 21.8868 45)" fill="#FCFCFC"/>
+    <rect x="21.694" y="8.72192" width="9.88071" height="35.8121" rx="4.94035" fill="#FCFCFC"/>
+    <rect x="1.50943" width="10.566" height="37.1429" rx="5.28302" fill="#FCFCFC"/>
+    </mask>
+    <g mask="url(#mask0_401_84)">
+    <rect x="-12.0755" y="-0.714233" width="62.6415" height="56.4286" fill="url(#paint0_linear_401_84)"/>
+    </g>
+    <defs>
+    <linearGradient id="paint0_linear_401_84" x1="-1.88682" y1="27.5001" x2="41.8868" y2="27.5001" gradientUnits="userSpaceOnUse">
+    <stop stopColor="#0066FF"/>
+    <stop offset="0.375" stopColor="#5D00FF"/>
+    <stop offset="0.890625" stopColor="#424458"/>
+    </linearGradient>
+    </defs>
     </svg>
   )
 }

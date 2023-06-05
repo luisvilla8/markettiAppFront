@@ -19,11 +19,13 @@
 
 .input__box {
   font-family: var(--secondFontFamily);
+  color: var(--mainTextColor);
   width: 100%;
-  border: 2px solid var(--semiSoftBgColor);
+  border: 1px solid var(--semiSoftBgColor);
   border-radius: .45rem;
   padding: .75rem .75rem .6rem;
   background-color: transparent;
+  transition: border .2s ease;
 }
 
 .input__box:focus {
