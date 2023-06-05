@@ -10,6 +10,7 @@
   color: var(--invertedTextColor);
   font-family: var(--fontFamily);
   font-weight: 600;
+  color: var(--buttonTextColor);
   cursor: pointer;
   z-index: 9;
 }
