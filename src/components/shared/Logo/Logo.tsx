@@ -1,6 +1,6 @@
 export const Logo = () => {
   return (
-    <svg width="35" height="35" viewBox="0 0 40 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="45" height="55" viewBox="0 0 40 45" fill="none" xmlns="http://www.w3.org/2000/svg">
     <mask id="mask0_401_84" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="1" y="0" width="39" height="45">
     <rect width="9.71671" height="36.4377" rx="4.85836" transform="matrix(0.719041 0.694968 -0.719041 0.694968 26.2002 7.01855)" fill="#FCFCFC"/>
     <rect x="21.8868" y="45" width="9.28571" height="18.1132" rx="4.64286" transform="rotate(-90 21.8868 45)" fill="#FCFCFC"/>

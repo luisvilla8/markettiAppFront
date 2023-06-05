@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useSignInForm } from './hooks';
 import { PATHS } from '@/constants';
-import { Button, Input, LogoTitle, Paragraph, Title, Copyright, Logo, PasswordInput } from '@/components'
+import { Button, Input, LogoTitle, Paragraph, Title, Copyright, Logo, PasswordInput, ToggleTheme } from '@/components'
 import styles from './SignIn.module.css'
 
 export const SignIn = () => {
@@ -16,8 +16,11 @@ export const SignIn = () => {
   return (
     <div className={styles.login__container}>
       <header className={styles.login__header}>
-        <Logo />
-        <LogoTitle>MarkettiApp</LogoTitle>
+        <div className={styles.login__logo_container}>
+          <Logo />
+          <LogoTitle>MarkettiApp</LogoTitle>
+        </div>
+        <ToggleTheme />
       </header>
       <form className={styles.login__body} onSubmit={handleSubmit}>
         <Title>Bienvenido de vuelta!</Title>

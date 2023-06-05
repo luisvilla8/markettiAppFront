@@ -7,6 +7,6 @@ type Props = {
 
 export const LogoTitle = ({ children }: Props) => {
   return (
-    <Title>{ children }</Title>
+    <Title fontSize="1rem">{ children }</Title>
   )
 }
