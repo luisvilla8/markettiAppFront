@@ -1,14 +1,11 @@
-import { Outlet, useNavigate } from "react-router-dom"
-import { useAppSelector } from "@/hooks";
+import { Outlet } from "react-router-dom"
 import { PATHS } from "@/constants";
+import { useRouteValidator } from "./hooks";
 
 export const MustAuth = () => {
 
-  const { isAuth } = useAppSelector( state => state.auth);
-  const navigate = useNavigate();
-
-  if (!isAuth) navigate(PATHS.SIGNIN)
-
+  useRouteValidator(PATHS.SIGNIN);
+  
   return (
     <Outlet />
   )
