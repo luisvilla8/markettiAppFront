@@ -13,9 +13,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
   display: block;
-  width: .15rem;
+  width: .1rem;
   height: 1.2rem;
   background-color: var(--semiSoftBgColor);
+  transition: background-color .3s ease;
 }
 
 .toggle_theme__container span {
@@ -26,6 +27,7 @@
   padding: .7rem;
   border-radius: .5rem 0 0 .5rem;
   cursor: pointer;
+  transition: all .3s ease;
 }
 
 .toggle_theme__container span:nth-of-type(2) {
@@ -34,7 +36,15 @@
 
 .toggle_theme__container span:hover {
   background-color: var(--secondaryColor);
-  box-shadow: 0px 0px 30px 5px var(--secondaryColor);
+  box-shadow: 0px 0px 30px -2px var(--secondaryColor);
+}
+
+.toggle_theme__container:hover::before {
+  background-color: transparent;
+}
+
+.toggle_theme__container span:hover svg {
+  color: var(--buttonTextColor) !important;
 }
 
 .toggle_theme__container svg {

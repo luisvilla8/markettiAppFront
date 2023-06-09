@@ -7,6 +7,7 @@ type Prop = typeof PATHS.HOME | typeof PATHS.SIGNIN | typeof PATHS.SIGNUP;
 
 export const useRouteValidator = (pathToRedirect: Prop ) => {
   const { isAuth } = useAppSelector( state => state.auth);
+  console.log("isAuth", isAuth)
   const navigate = useNavigate();
 
   const redirectTo = () => {

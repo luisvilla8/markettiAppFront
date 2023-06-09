@@ -20,7 +20,7 @@ export const Input = ({ name, label, errors, register, type = "text"}: Props) =>
         className={styles.input__box}
         placeholder={`Ingresa tu ${label}`}
         {...register(name)}
-        style={{ borderColor: errors[name] && 'var(--dangerColor)' }}
+        style={{ outlineColor: errors[name] && 'var(--dangerColor)' }}
       />
       { errors[name] && <span className={styles.input_message} role="error">{errors[name].message}</span>}
     </div>

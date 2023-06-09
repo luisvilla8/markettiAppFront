@@ -4,6 +4,7 @@
   --softTextColor: #898989;
   --semiSoftTextColor: #948E97;
   --invertedTextColor: #F5F5FA;
+  --buttonTextColor: #F5F5FA;
 
   --primaryColor: #0066FF;
   --secondaryColor: #5D00FF;
@@ -21,7 +22,7 @@
   --fontFamily: 'Raleway', sans-serif;
   --secondFontFamily: 'Poppins', sans-serif;
 }
-html.is-dark-mode {
+.app.dark-mode {
   --mainTextColor: #F5F5FA;
   --labelTextColor: #bdbdbd;
   --softTextColor: #948E97;

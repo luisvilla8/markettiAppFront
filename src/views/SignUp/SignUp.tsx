@@ -1,24 +1,29 @@
-import { Link } from 'react-router-dom'
-import { PATHS } from '@/constants'
-import { useSignUpForm } from './hooks/useSignUpForm'
-import { Button, Input, LogoTitle, Paragraph, Title, Copyright, Logo, PasswordInput} from '@/components'
+import { Link, useNavigate } from 'react-router-dom'
+import { SignUpForm } from '@/types'
+import { signUpThunk } from '@/redux'
+import { useAppDispatch, useAuthForm } from '@/hooks'
+import { PATHS, SignUpFormDefaultValues, SignUpFormSchema } from '@/constants'
+import { Button, Input, Paragraph, Title, Copyright,PasswordInput, AuthHeader} from '@/components'
 import styles from './SignUp.module.css'
 
 export const SignUp = () => {
+
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
+
+  const redirectTo = () => navigate(PATHS.HOME)
+  const onSubmit = async (data: SignUpForm): Promise<any> => dispatch(signUpThunk(data, redirectTo))
 
   const {
     register,
     handleSubmit,
     errors,
     isValid,
-  } = useSignUpForm()
+  } = useAuthForm(SignUpFormDefaultValues, SignUpFormSchema, onSubmit)
 
   return (
     <div className={styles.signup__container}>
-      <header className={styles.signup__header}>
-        <Logo />
-        <LogoTitle>MarketiApp</LogoTitle>
-      </header>
+      <AuthHeader />
       <form className={styles.signup__body} onSubmit={() => handleSubmit}>
         <Title>Hola, bienvenido(a)!</Title>
         <Paragraph>Para poder registrarte en el sistema, por favor completa los siguientes campos</Paragraph>

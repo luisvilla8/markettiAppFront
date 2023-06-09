@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getItemFromLG, setItemToLG } from "@/helpers";
+import { LOCAL_STORAGE_KEYS } from "@/constants";
 
-const initialState = {
+const initialState = getItemFromLG(LOCAL_STORAGE_KEYS.AUTH) ?? {
   user: null,
   isAuth: false,
   authKey: null,
@@ -15,12 +17,14 @@ export const authSlice = createSlice({
       state.user = action.payload.user;
       state.authKey = action.payload.token;
       state.isAuth = true;
+      setItemToLG(LOCAL_STORAGE_KEYS.AUTH, state);
     },
     setAuthDataOnFail: (state, action) => {
       state.user = null;
       state.authKey = null;
       state.isAuth = false;
       state.error = action.payload;
+      setItemToLG(LOCAL_STORAGE_KEYS.AUTH, state)
     }
   },
 });

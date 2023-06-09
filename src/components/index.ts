@@ -3,6 +3,7 @@ export * from './base/Input/Input';
 export * from './base/Paragraph/Paragraph';
 export * from './base/Title/Title';
 export * from './index';
+export * from './shared/AuthHeader/AuthHeader';
 export * from './shared/Copyright/Copyright';
 export * from './shared/Logo/Logo';
 export * from './shared/LogoTitle/LogoTitle';

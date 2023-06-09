@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from "./slices/authSlice";
-import thunk from "redux-thunk";
+import { themeReducer, authReducer } from "./slices";
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
+    theme: themeReducer,
   },
   middleware: getDefaultMiddleware => getDefaultMiddleware(),
 });

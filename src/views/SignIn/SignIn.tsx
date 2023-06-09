@@ -1,27 +1,30 @@
-import { Link } from 'react-router-dom'
-import { useSignInForm } from './hooks';
-import { PATHS } from '@/constants';
-import { Button, Input, LogoTitle, Paragraph, Title, Copyright, Logo, PasswordInput, ToggleTheme } from '@/components'
+import { Link, useNavigate } from 'react-router-dom'
+import { SignInForm } from '@/types';
+import { signInThunk } from '@/redux';
+import { useAppDispatch, useAuthForm } from '@/hooks';
+import { PATHS, SignInFormDefaultValues, SignInFormSchema } from '@/constants';
+import { Button, Input, Paragraph, Title, Copyright, PasswordInput, AuthHeader } from '@/components'
 import styles from './SignIn.module.css'
 
 export const SignIn = () => {
+
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
+
+  const redirectTo = () => navigate(PATHS.HOME)
+
+  const onSubmit = async (data: SignInForm): Promise<any> => dispatch(signInThunk(data, redirectTo))
 
   const {
     register,
     handleSubmit,
     errors,
     isValid,
-  } = useSignInForm()
+  } = useAuthForm(SignInFormDefaultValues, SignInFormSchema, onSubmit)
 
   return (
     <div className={styles.login__container}>
-      <header className={styles.login__header}>
-        <div className={styles.login__logo_container}>
-          <Logo />
-          <LogoTitle>MarkettiApp</LogoTitle>
-        </div>
-        <ToggleTheme />
-      </header>
+      <AuthHeader />
       <form className={styles.login__body} onSubmit={handleSubmit}>
         <Title>Bienvenido de vuelta!</Title>
         <Paragraph>Por favor, ingresa tus credenciales para acceder al sistema</Paragraph>
