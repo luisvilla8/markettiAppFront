@@ -3,6 +3,7 @@
   --labelTextColor: #222222;
   --softTextColor: #898989;
   --semiSoftTextColor: #948E97;
+  --iconColor: #424458;
   --invertedTextColor: #F5F5FA;
   --buttonTextColor: #F5F5FA;
 
@@ -10,6 +11,7 @@
   --secondaryColor: #5D00FF;
 
   --baseBgColor: #FCFCFC;
+  --secondaryBgColor: #F5F5FA;
   --semiBaseBgColor: #D9D9D9;
   --mainBgColor: #5D00FF;
   --semiMainBgColor: #8686FF;
@@ -22,18 +24,23 @@
   --fontFamily: 'Raleway', sans-serif;
   --secondFontFamily: 'Poppins', sans-serif;
 }
-.app.dark-mode {
+html .dark-mode {
   --mainTextColor: #F5F5FA;
   --labelTextColor: #bdbdbd;
   --softTextColor: #948E97;
   --semiSoftTextColor: #948E97;
+  --iconColor: #424458;
   --invertedTextColor: #06060B;
   --buttonTextColor: #F5F5FA;
 
   --primaryColor: #0066FF;
   --secondaryColor: #5D00FF;
+  --tertiaryColor: #FF0000;
+  --quaternaryColor: #00FE66;
+  --quinaryColor: #78C6FF;
 
   --baseBgColor: #131313;
+  --secondaryBgColor: #22222266;
   --semiBaseBgColor: #06060B;
   --mainBgColor: #5D00FF;
   --semiMainBgColor: #8686FF;
