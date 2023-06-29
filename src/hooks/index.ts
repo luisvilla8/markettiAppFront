@@ -1,4 +1,5 @@
 export * from './index';
 export * from './redux';
-export * from './useAuthForm';
+export * from './useCustomForm';
 export * from './useLocalStorage';
+export * from './useWindowSize';

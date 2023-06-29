@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 type onSubmit = (prop: any) => Promise<any>
 
-export const useAuthForm = (defaultValues: any, schema: any, onSubmit: onSubmit) => {
+export const useCustomForm = (defaultValues: any, schema: any, onSubmit: onSubmit) => {
 
   const {
     register,
