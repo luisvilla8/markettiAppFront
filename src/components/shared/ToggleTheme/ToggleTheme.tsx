@@ -11,28 +11,18 @@ export const ToggleTheme = () => {
 
   return (
     <div className={styles.toggle_theme__container}>
-      <span onClick={ () => dispatch(setThemeThunk(THEMES.DARK)) } style={{ padding: '.85rem .7rem'}}>
+      <span onClick={ () => dispatch(setThemeThunk(THEMES.DARK)) } style={{ padding: '0 .7rem'}}>
         {
           theme === THEMES.DARK ?
-          <TbMoonFilled
-            color={`${theme === THEMES.DARK ? 'var(--secondaryColor)' : 'var(--mainTextColor)'}`}
-          /> :
-          <TbMoon
-            color={`${theme === THEMES.DARK ? 'var(--secondaryColor)' : 'var(--mainTextColor)'}`}
-          />
+          <TbMoonFilled color={`${theme === THEMES.DARK ? 'var(--secondaryColor)' : 'var(--mainTextColor)'}`}/> :
+          <TbMoon color={`${theme === THEMES.DARK ? 'var(--secondaryColor)' : 'var(--mainTextColor)'}`}/>
         }
       </span>
       <span onClick={ () => dispatch(setThemeThunk(THEMES.LIGHT)) } >
         {
           theme === THEMES.LIGHT ? 
-          <TbSunFilled
-            fontSize={'1.3rem'}
-            color={`${theme === THEMES.LIGHT ? 'var(--secondaryColor)' : 'var(--mainTextColor)'}`}
-          /> : 
-          <TbSunHigh
-            fontSize={'1.3rem'}
-            color={`${theme === THEMES.LIGHT ? 'var(--secondaryColor)' : 'var(--mainTextColor)'}`}
-          />
+          <TbSunFilled color={`${theme === THEMES.LIGHT ? 'var(--secondaryColor)' : 'var(--mainTextColor)'}`}/> :
+          <TbSunHigh color={`${theme === THEMES.LIGHT ? 'var(--secondaryColor)' : 'var(--mainTextColor)'}`}/>
         }
       </span>
     </div>

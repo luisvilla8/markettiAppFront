@@ -1,7 +1,7 @@
-import { Input } from '@/components'
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
-import styles from './PasswordInput.module.css'
 import { useState } from 'react'
+import { IoMdEye, IoMdEyeOff } from 'react-icons/io'
+import { Input } from '@/components'
+import styles from './PasswordInput.module.css'
 
 type Props = {
   errors: any
@@ -33,8 +33,10 @@ export const PasswordInput = ({ errors, register}: Props) => {
   return (
     <div className={styles.password__input__container}>
       <Input name="password" label="Password" type="password" errors={errors} register={register}/>
-      <button className={styles.password__input__icon} onClick={togglePasswordDisplay}>
-        { isPasswordShown ? <AiOutlineEyeInvisible/> : <AiOutlineEye />}
+      <button className={styles.password__input__icon} onClick={togglePasswordDisplay}
+        aria-label="Show password button"
+      >
+        { isPasswordShown ? <IoMdEyeOff /> : <IoMdEye />}
       </button>
     </div>
   )
