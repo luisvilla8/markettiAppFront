@@ -1,5 +1,5 @@
 export * from './base/Button/Button';
-export * from './base/Datepicker/Datepicker';
+export { default as Datepicker } from './base/Datepicker/Datepicker';
 export * from './base/Datepicker/components/DaysInMonth';
 export * from './base/Datepicker/components/NextMonthDays';
 export * from './base/Datepicker/components/PrevMonthDays';
@@ -8,6 +8,7 @@ export * from './base/Paragraph/Paragraph';
 export * from './base/Select/Select';
 export * from './base/Title/Title';
 export * from './index';
+export * from './shared/CancelButton/CancelButton';
 export * from './shared/Copyright/Copyright';
 export * from './shared/Header/Header';
 export * from './shared/Header/components/Navbar/Navbar';
