@@ -2,16 +2,12 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { IoIosArrowDown } from "react-icons/io"
 import styles from "./Select.module.css"
+import { SelectOption, SelectOptionValue } from "@/types"
 
 type Props = {
-  defaultValue: Option
-  options: Option[]
-}
-
-type Option = {
-  id: string
-  name: string
-  value: number | string
+  value?: SelectOption
+  options: SelectOption[]
+  updateValue: (option: SelectOptionValue) => void
 }
 
 const selectVariants = {
@@ -35,20 +31,19 @@ const selectVariants = {
   }
 }
 
-export const Select = ({defaultValue, options}: Props) => {
+export const Select = ({value, options, updateValue}: Props) => {
 
-  const [ selected, setSelected ] = useState(defaultValue)
   const [ isOpen, setIsOpen] = useState<'open' | 'closed'>('closed')
   const toggleIsOpen = () => setIsOpen(isOpen === 'closed' ? 'open' : 'closed')
-  const handleSelect = (option: Option) => {
-    setSelected(option)
+  const handleSelect = (option: SelectOption) => {
+    updateValue(option.value)
     toggleIsOpen()
   }
 
   return (
     <>
       <div className={styles.container} onClick={toggleIsOpen} is-open={isOpen}>
-        { selected.name }
+        { !value ? "Select and option" : value.value }
         <span className={styles.icon}>
           <IoIosArrowDown />
         </span>
@@ -58,10 +53,10 @@ export const Select = ({defaultValue, options}: Props) => {
           animate={isOpen}
         >
           { options.map(option => (
-            <li key={option.id} className={styles.option}
+            <li key={option.value} className={styles.option}
               onClick={() => handleSelect(option)}
             >
-              { option.name }
+              { option.label }
             </li>
           ))}
         </motion.ul>
