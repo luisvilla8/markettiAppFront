@@ -26,7 +26,7 @@ export const Home = () => {
       <section className={styles.survey_list_header}>
         <div>
           <Title fontSize='1.2rem' fontStyle='italic' fontWeight='800'>Last surveys</Title>
-          <Button style={{ width: '8rem', padding: '.5rem', margin: '0' }} handleClick={navigateToCreateSurvey}>
+          <Button style={{ width: '8rem', padding: '.5rem', margin: '0' }} onClick={navigateToCreateSurvey}>
             + Create survey
           </Button>
         </div>

@@ -7,10 +7,10 @@ type Props = {
   disabled?: boolean
   type?: "submit" | "button"
   style?: object
-  handleClick?: () => void
+  onClick?: () => void
 }
 
-export const Button = ({ children, handleClick, style = {}, disabled = false, type = "submit" }: Props) => {
+export const Button = ({ children, onClick, style = {}, disabled = false, type = "submit" }: Props) => {
   return (
     <motion.button
       className={styles.button__container}
@@ -18,7 +18,7 @@ export const Button = ({ children, handleClick, style = {}, disabled = false, ty
       type={type}
       disabled={disabled}
       whileTap={{ scale: 0.98 }}
-      onClick={handleClick}
+      onClick={onClick}
     >
       { children }
     </motion.button>
