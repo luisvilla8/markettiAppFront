@@ -1,0 +1,25 @@
+.auth__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.auth__logo_container {
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.auth__header > h1 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 1024px) {
+  .auth__header {
+    margin: 0;
+  }
+}

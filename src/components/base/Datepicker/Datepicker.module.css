@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.container label {
+  font-family: var(--fontFamily);
+  font-weight: 600;
+  font-size: .8rem;
+  color: var(--labelTextColor);
+  margin-bottom: -0.5rem;
+}
+
+.select_input {
+  font-family: var(--secondFontFamily);
+  font-size: .8rem;
+  color: var(--mainTextColor);
+  width: 100%;
+  border: none;
+  border: 1px solid var(--semiSoftBgColor);
+  border-radius: 0.45rem;
+  padding: 0.8rem;
+  background-color: transparent;
+  transition: border .2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+}
+
+.datepicker {
+  width: 20rem;
+  padding: 1.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(66, 68, 88, 0.50);
+  background: linear-gradient(90deg, #131313 0%, #131313 100%);
+}
+
+.datepicker_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #F5F5FA;
+  font-family: var(--secondFontFamily);
+  margin-bottom: 1.5rem;
+  padding: 0 .25rem;
+}
+
+.datepicker_header button {
+  color: #F5F5FA;
+  opacity: 1;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 .25rem;
+  border-radius: .5rem;
+  border: 1px solid rgba(66, 68, 88, 0.50);
+  background: #131313;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
+.datepicker_header button:hover {
+  background-color: #222222;
+}
+
+.current_month {
+  font-weight: bold;
+  font-size: .8rem;
+  color: #F5F5FA;
+  font-family: var(--secondFontFamily);
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+}
+
+.weekdays > div {
+  text-align: center;
+  font-family: var(--secondFontFamily);
+  color: #898989;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.datepicker_day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .6rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  color: #F5F5FA;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: var(--secondFontFamily);
+}
+
+.datepicker_day:hover {
+  background-color: #222222;
+}
+
+.prev_month,
+.next_month {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+.datepicker_day:is(.prev_month,.next_month) {
+  cursor: context-menu;
+}
+
+:is(.selected, .selected:hover) {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.blank {
+  height: 30px;
+}
+
+.datepicker_footer {
+  display: block;
+  color: #898989;
+  font-size: 0.8rem;
+  font-family: var(--secondFontFamily);
+  padding-top: 1.5rem;
+  padding-left: .5rem;
+}

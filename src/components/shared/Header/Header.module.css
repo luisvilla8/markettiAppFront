@@ -1,0 +1,23 @@
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+.header_container > header {
+  margin: 0;
+}
+
+.btn_menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_menu svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--mainTextColor);
+}

@@ -1,0 +1,49 @@
+.container {
+  font-family: var(--secondFontFamily);
+  font-size: .8rem;
+  color: var(--mainTextColor);
+  width: 100%;
+  border: none;
+  border: 1px solid var(--semiSoftBgColor);
+  border-radius: 0.45rem;
+  padding: 0.8rem;
+  background-color: transparent;
+  transition: border .2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+}
+
+.container[is-open="open"] {
+  border-bottom: none;
+  border-radius: 0.45rem 0.45rem 0 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border: 1px solid var(--semiSoftBgColor);
+  border-top: none;
+  border-radius: 0 0 0.45rem 0.45rem;
+  width: 100.5%;
+  height: 10rem;
+  position: absolute;
+  top: 100%;
+  right: -.25%;
+  background-color: var(--baseBgColor);
+}
+
+.option {
+  padding: .25rem 1rem;
+  cursor: context-menu;
+  font-size: .8rem;
+  font-family: var(--secondFontFamily);
+  font-weight: 400;
+}
+
+.option:hover {
+  background-color: var(--semiSoftBgColor);
+}

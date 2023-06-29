@@ -7,7 +7,7 @@ export type SignInResponse = {
   status: number;
   data: {
     message: string;
-    response: { 
+    response?: {
       user: {
         id: string;
         name: string;

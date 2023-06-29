@@ -7,12 +7,15 @@
   border: none;
   border-radius: .25rem;
   background-color: var(--mainBgColor);
-  color: var(--invertedTextColor);
   font-family: var(--fontFamily);
   font-weight: 600;
   color: var(--buttonTextColor);
   cursor: pointer;
-  z-index: 9;
+  z-index: 2;
+}
+
+.button__container:focus {
+  outline: none;
 }
 
 .button__container:hover.button__container::before {

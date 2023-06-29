@@ -1,0 +1,48 @@
+.card_container {
+  position: relative;
+  overflow: hidden;
+  width: clamp(12rem, 100%, 24rem);
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 1.4rem;
+  border-radius: .5rem;
+  text-align: left;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.card > :is(header, footer) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card > main {
+  margin: 1rem 0;
+}
+
+.card_bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: .5rem;
+  background-color: var(--secondaryBgColor);
+}
+
+.card_bg::before {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 18%;
+  position: absolute;
+  background: #5D00FF;
+  filter: blur(30px);
+  top: 50%;
+  right: 20%;
+}

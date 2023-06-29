@@ -1,0 +1,18 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--baseBgColor);
+}
+
+.body {
+  padding: 0 2rem;
+}
+
+.survey_list_header {
+  margin-top: 2rem;
+}
+
+.survey_list_header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

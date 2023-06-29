@@ -21,16 +21,17 @@
   font-family: var(--secondFontFamily);
   color: var(--mainTextColor);
   width: 100%;
-  border: 1px solid var(--semiSoftBgColor);
+  border: none;
+  outline: 1px solid var(--semiSoftBgColor);
   border-radius: .45rem;
-  padding: .75rem .75rem .6rem;
+  padding: .8rem;
   background-color: transparent;
   transition: border .2s ease;
 }
 
 .input__box:focus {
   outline: none;
-  border: 2px solid var(--semiMainBgColor);
+  outline: 2px solid var(--semiMainBgColor);
 }
 
 .input_message {

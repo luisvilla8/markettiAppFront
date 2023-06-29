@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.container > svg {
+  color: var(--iconColor);
+  font-size: 1.2rem;
+}
