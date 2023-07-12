@@ -8,12 +8,13 @@ type Props = {
   value?: SelectOption
   options: SelectOption[]
   updateValue: (option: SelectOptionValue) => void
+  customStyles?: React.CSSProperties
 }
 
 const selectVariants = {
   open: {
     opacity: 1,
-    height: "10rem",
+    height: "auto",
     transition: {
       duration: .3,
       staggerChildren: .1,
@@ -31,7 +32,7 @@ const selectVariants = {
   }
 }
 
-export const Select = ({value, options, updateValue}: Props) => {
+export const Select = ({value, options, updateValue, customStyles}: Props) => {
 
   const [ isOpen, setIsOpen] = useState<'open' | 'closed'>('closed')
   const toggleIsOpen = () => setIsOpen(isOpen === 'closed' ? 'open' : 'closed')
@@ -42,7 +43,7 @@ export const Select = ({value, options, updateValue}: Props) => {
 
   return (
     <>
-      <div className={styles.container} onClick={toggleIsOpen} is-open={isOpen}>
+      <div className={styles.container} onClick={toggleIsOpen} is-open={isOpen} style={customStyles}>
         { !value ? "Select and option" : value.value }
         <span className={styles.icon}>
           <IoIosArrowDown />
