@@ -1,4 +1,4 @@
-import styles from '../Datepicker.module.css';
+import styles from '../Calendar.module.css';
 
 type Props = {
   blankDaysBefore: Array<any>;

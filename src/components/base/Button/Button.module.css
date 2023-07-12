@@ -18,7 +18,7 @@
   outline: none;
 }
 
-.button__container:hover.button__container::before {
+.highlight:hover.highlight::before {
   content: "";
   position: absolute;
   top: 0;
@@ -40,6 +40,15 @@
 }
 .button__container:hover:disabled.button__container::before {
   animation: none;
+}
+
+.cancel {
+  background-color: var(--semiSoftBgColor);
+  color: var(--labelTextColor);
+  width: 100%;
+}
+.cancel:hover.cancel::before {
+  display: none;
 }
 
 @keyframes btnbg {
